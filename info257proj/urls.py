@@ -15,7 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from . import views
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+	url(r'^test/', views.test_page),
+    url(r'^search_time_series/', views.search_time_series),
+    url(r'^search_node_summary_queries/', views.search_node_summary_queries),
+    url(r'^search_spoint_summary_queries/', views.search_spoint_summary_queries),
+	url(r'^download/', views.download),
+	url(r'^', views.search_type),
+	url(r'^admin/', admin.site.urls),
+	
 ]

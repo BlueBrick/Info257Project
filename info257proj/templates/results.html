@@ -1,0 +1,26 @@
+<table border=1>
+
+	{% for k in data %}
+		{% if forloop.first %}
+    		<tr>
+    			{% for i in k %}
+       				<th>{{ i }}</th>
+    			{% endfor %}
+    		</tr>
+    	{% else %}
+    		<tr>
+    			{% for i in k%}
+        			<td>{{ i }}</td>
+        		{% endfor %}
+    	</tr>
+    	{% endif %}
+    {% endfor %}
+
+
+</table>
+
+<form action="/download/" method="POST">
+	{% csrf_token %}
+	<input type='hidden' value='{{ data }}' name='data'>
+    <input id="submit" type="submit" value= "Download" name="Download"/>
+</form>

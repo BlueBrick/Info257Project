@@ -1,0 +1,14 @@
+<form action="/search_type/" method="POST">
+	{% csrf_token %}
+    <input id="submit" type="submit" value="Time Series" name="Time Series"/>
+</form>
+
+<form action="/search_type/" method="POST">
+	{% csrf_token %}
+    <input id="submit" type="submit" value="Node Summary Queries" name="Node Summary Queries" />
+</form>
+
+<form action="/search_type/" method="POST">
+	{% csrf_token %}
+    <input id="submit" type="submit" value="SPoint Summary Queries" name="SPoint Summary Queries" />
+</form>
